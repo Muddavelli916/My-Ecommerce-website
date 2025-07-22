@@ -1,0 +1,47 @@
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-photo-wrapper {
+  cursor: pointer;
+}
+
+.user-photo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2e7d32;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-photo-placeholder {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e0f2f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: #2e7d32;
+  border: 2px dashed #80cbc4;
+  font-weight: bold;
+}
+
+.user-name-input {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  border: none;
+  background: transparent;
+  width: 100px;
+  outline: none;
+}
+
+.user-role {
+  font-size: 12px;
+  color: gray;
+}

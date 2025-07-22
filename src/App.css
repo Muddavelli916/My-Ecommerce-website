@@ -1,0 +1,99 @@
+/* App.css */
+
+/* ========== Global App Styles ========== */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* ========== Layout Containers ========== */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Sidebar + Content Layout */
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  margin-top: 80px; /* Header height */
+  transition: all 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  height: calc(100vh - 80px);
+  position: fixed;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 100;
+  margin-right: 2px;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Main Content with Footer Support */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 0px; /* Default when sidebar is closed */
+  width: 100%;
+}
+
+/* Sidebar open adjustment */
+.sidebar.open + .main-content {
+  margin-left: 240px; /* Sidebar (220px) + 20px gap */
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .sidebar.open + .main-content {
+    margin-left: 20px; /* Keep minimal margin for mobile */
+  }
+}

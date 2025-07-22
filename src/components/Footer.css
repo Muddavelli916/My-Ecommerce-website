@@ -1,0 +1,92 @@
+/* ========== MAIN FOOTER WRAPPER ========== */
+.zepto-footer {
+  background: linear-gradient(to bottom, #e9ffe9, #ffffff);
+  border-top: 1px solid #392972;
+  padding: 24px 40px; /* 🔽 Reduced padding */
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* ========== TOP SECTION ========== */
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* ========== LOGO + SOCIAL ICONS ========== */
+.footer-logo-social {
+  flex: 1;
+  min-width: 220px;
+}
+
+.zepto-logo {
+  font-size: 24px; /* 🔽 Slightly reduced */
+  font-weight: bold;
+  color: #ff3366;
+}
+
+.social-icons {
+  margin: 10px 0; /* 🔽 Reduced */
+  display: flex;
+  gap: 12px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* ========== FOOTER LINKS ========== */
+.footer-links {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 480px;
+}
+
+.footer-links div {
+  margin: 8px 20px 8px 0; /* 🔽 Less margin */
+}
+
+.footer-links p {
+  margin: 6px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ========== APP DOWNLOAD SECTION ========== */
+.download-app {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding-left: 4px;
+  margin-top: 10px; /* 🔽 Lower margin */
+}
+
+.download-app p {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.store-button {
+  display: block;
+  width: 160px;    /* 🔽 Smaller width */
+  height: 50px;    /* 🔽 Smaller height */
+  margin: 4px 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.store-icon {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.store-icon:hover {
+  transform: scale(1.05);
+}

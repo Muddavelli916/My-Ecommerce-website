@@ -1,0 +1,229 @@
+/* ================= Meat Products Page Styles ================= */
+
+/* === Wrapper & Container === */
+.meat-wrapper {
+  padding: 30px 24px;
+  background: linear-gradient(to bottom, #fff3f3, #ffffff); /* soft light-pink to white meat feel */
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.meat-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* === Carousel Banner === */
+.meat-carousel-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff6f6;
+  padding: 25px 30px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+.meat-carousel-banner img {
+  width: 100%;
+  max-width: 320px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.meat-offer-text {
+  max-width: 600px;
+}
+
+.meat-offer-text h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+  color: #b71c1c; /* deep red tone */
+}
+
+.meat-offer-text p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* === Section Title === */
+.meat-section-title {
+  margin: 30px 0 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c2c2c;
+}
+
+/* === Products Grid === */
+.meat-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* === Product Card === */
+.meat-card-box {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  text-align: center;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  position: relative;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.meat-card-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.meat-card-box img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* === Blurred / Sold Out Overlay === */
+.blurred {
+  opacity: 0.5;
+  filter: grayscale(70%);
+}
+
+.sold-out-overlay {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #fff;
+  color: #999;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 5px;
+  z-index: 2;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* === Card Text === */
+.meat-card-box h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 5px 0;
+  color: #222;
+}
+
+.meat-price {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.meat-original {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 6px;
+}
+
+.meat-discount {
+  font-weight: bold;
+  color: #b71c1c; /* red meat tone */
+}
+
+.meat-offer {
+  font-size: 13px;
+  color: #c62828;
+  margin-bottom: 10px;
+}
+
+/* === Add/Notify Buttons === */
+.meat-add-btn,
+.notify-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Add to Cart */
+.meat-add-btn {
+  background-color: #fff;
+  color: #b71c1c;
+  border: 1px solid #b71c1c;
+}
+
+.meat-add-btn:hover {
+  background-color: #b71c1c;
+  color: white;
+}
+
+/* Notify Me */
+.notify-btn {
+  background: #fff;
+  color: #e53935;
+  border: 1px solid #e53935;
+}
+
+.notify-btn:hover {
+  background-color: #e53935;
+  color: white;
+}
+
+/* === Quantity Controls === */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.quantity-controls button {
+  background-color: #b71c1c;
+  border: none;
+  padding: 4px 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quantity-controls span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .meat-carousel-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .meat-offer-text {
+    max-width: 100%;
+  }
+
+  .meat-carousel-banner img {
+    width: 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,363 @@
+/* Orderpage.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  overflow-x: hidden;
+}
+
+.orders-page {
+  padding: 40px 20px;
+  max-width: 1300px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/* === Top Metrics === */
+.top-metrics {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 200px;
+  padding: 20px;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card span {
+  display: block;
+  font-size: 26px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.top-metrics .card svg {
+  display: block;
+  margin: 0 auto 6px;
+  color: white;
+  font-size: 30px;
+}
+
+.orange { background-color: #ff7043; }
+.purple { background-color: #8e24aa; }
+.green  { background-color: #26a69a; }
+.blue   { background-color: #42a5f5; }
+
+/* === Middle Section (2-row layout) === */
+.middle-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.sales-row {
+  display: flex;
+  justify-content: center;
+}
+
+.visitor-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Sales Chart Section */
+.sales-section {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.sales-section h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.sales-stats p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.chart-wrapper {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Visitors & Target Cards */
+.right-box {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.right-box h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+.visitors-count {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.fake-chart {
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+/* === Target Box (Circular Progress) === */
+.target-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #e5e21e, #f5f24254);
+  border-radius: 16px;
+  padding: 24px;
+  color: black;
+  flex-wrap: nowrap;
+  gap: 10px;
+  min-height: 120px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.target-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.target-title {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.target-number {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 8px 0 0;
+  line-height: 1.2;
+}
+
+.target-number .sub {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.target-graph {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.target-graph svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.progress-text {
+  position: absolute;
+  top: 70%;
+  left: 36%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* === Filter Dropdown & PDF Button === */
+.sales-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sales-header select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.sales-header button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sales-header button:hover {
+  background-color: #388e3c;
+}
+
+/* === Order Tabs === */
+.order-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.order-tabs button {
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.order-tabs button.active {
+  background: #673ab7;
+  color: white;
+  border-color: #673ab7;
+}
+
+/* === Order Table === */
+.order-list {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.order-list table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.order-list th,
+.order-list td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.order-list th {
+  background-color: #f1f1f1;
+  font-weight: 600;
+}
+
+/* === Status Badges === */
+.status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status.pending {
+  background-color: #ffeb3b;
+  color: #555;
+}
+
+.status.processing {
+  background-color: #29b6f6;
+  color: white;
+}
+
+.status.success {
+  background-color: #66bb6a;
+  color: white;
+}
+
+/* === Shipping Section === */
+.shipping-section {
+  margin-top: 40px;
+}
+
+.shipping-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.shipping-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  flex: 1;
+  min-width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* === Responsive Styles === */
+@media (max-width: 768px) {
+  .top-metrics,
+  .order-tabs {
+    flex-direction: column;
+  }
+
+  .sales-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sales-row,
+  .visitor-row,
+  .shipping-list {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .target-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .target-graph {
+    margin-top: 10px;
+  }
+
+  .target-details {
+    align-items: center;
+  }
+}

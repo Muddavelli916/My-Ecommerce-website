@@ -1,0 +1,229 @@
+/* ================= Frozen Products Page Styles ================= */
+
+/* === Wrapper & Container === */
+.frozen-wrapper {
+  padding: 30px 24px;
+  background: linear-gradient(to bottom, #e0f7ff, #f8fdff); /* icy blue to white */
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.frozen-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* === Carousel Banner === */
+.frozen-carousel-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 0 12px rgba(0, 180, 255, 0.08);
+}
+
+.frozen-carousel-banner img {
+  width: 100%;
+  max-width: 320px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.frozen-offer-text {
+  max-width: 600px;
+}
+
+.frozen-offer-text h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+  color: #007ba7; /* cool aqua */
+}
+
+.frozen-offer-text p {
+  font-size: 15px;
+  color: #444;
+}
+
+/* === Section Title === */
+.frozen-section-title {
+  margin: 30px 0 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* === Products Grid === */
+.frozen-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* === Product Card === */
+.frozen-card-box {
+  background-color: #fdfefe;
+  border: 1px solid #d6ecf3;
+  border-radius: 14px;
+  text-align: center;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 180, 255, 0.08);
+  position: relative;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.frozen-card-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 180, 255, 0.12);
+}
+
+.frozen-card-box img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* === Blurred / Sold Out Overlay === */
+.blurred {
+  opacity: 0.5;
+  filter: grayscale(70%);
+}
+
+.sold-out-overlay {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #fff;
+  color: #999;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 5px;
+  z-index: 2;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* === Card Text === */
+.frozen-card-box h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 5px 0;
+  color: #333;
+}
+
+.frozen-price {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.frozen-original {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 6px;
+}
+
+.frozen-discount {
+  font-weight: bold;
+  color: #007ba7;
+}
+
+.frozen-offer {
+  font-size: 13px;
+  color: #008ecc;
+  margin-bottom: 10px;
+}
+
+/* === Add/Notify Buttons === */
+.frozen-add-btn,
+.notify-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Add to Cart */
+.frozen-add-btn {
+  background-color: #ffffff;
+  color: #007ba7;
+  border: 1px solid #007ba7;
+}
+
+.frozen-add-btn:hover {
+  background-color: #007ba7;
+  color: white;
+}
+
+/* Notify Me */
+.notify-btn {
+  background: #ffffff;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}
+
+.notify-btn:hover {
+  background-color: #d32f2f;
+  color: white;
+}
+
+/* === Quantity Controls === */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.quantity-controls button {
+  background-color: #007ba7;
+  border: none;
+  padding: 4px 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quantity-controls span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .frozen-carousel-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .frozen-offer-text {
+    max-width: 100%;
+  }
+
+  .frozen-carousel-banner img {
+    width: 100%;
+    max-width: 100%;
+  }
+}

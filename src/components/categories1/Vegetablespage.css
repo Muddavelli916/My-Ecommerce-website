@@ -1,7 +1,7 @@
 /* === Wrapper & Container === */
 .vegetables-wrapper {
   padding: 30px 24px;
-  background: linear-gradient(to bottom, #e9ffe9, #ffffff); /* soft green-white */
+  background: linear-gradient(to bottom, #e9ffe9, #ffffff);
   font-family: 'Segoe UI', sans-serif;
   min-height: 100vh;
   width: 100%;
@@ -10,6 +10,7 @@
   justify-content: center;
 }
 
+/* === Container === */
 .vegetables-container {
   width: 100%;
   max-width: 1200px;
@@ -25,7 +26,7 @@
   background: #f2fff2;
   padding: 25px 30px;
   border-radius: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   gap: 20px;
   flex-wrap: wrap;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
@@ -61,14 +62,15 @@
   color: #333;
 }
 
-/* === Vegetables Grid === */
+/* === Grid Layout === */
 .vegetable-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr); /* Force 4 columns */
+  gap: 28px 24px;
+  margin-bottom: 60px;
 }
 
-/* === Individual Vegetable Card === */
+/* === Vegetable Card === */
 .vegetable-card-box {
   background-color: #fff;
   border: 1px solid #eee;
@@ -78,9 +80,12 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   position: relative;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
+  min-height: 360px; /* Ensures consistent height */
 }
-
 .vegetable-card-box:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
@@ -99,7 +104,7 @@
   filter: grayscale(70%);
 }
 
-/* === Sold Out === */
+/* === Sold Out Label === */
 .sold-out-overlay {
   position: absolute;
   top: 8px;
@@ -114,7 +119,17 @@
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
-/* === Card Text === */
+/* === Favorite Icon === */
+.fav-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #e91e63;
+  font-size: 18px;
+  z-index: 2;
+}
+
+/* === Vegetable Text Info === */
 .vegetable-card-box h3 {
   font-size: 16px;
   font-weight: 500;
@@ -122,6 +137,36 @@
   color: #222;
 }
 
+.vegetable-desc {
+  font-size: 14px;
+  color: #666;
+  padding-bottom: 10px;
+  min-height: 32px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.vegetable-stock {
+  font-size: 13px;
+  color: #388e3c;
+  margin: 4px 0;
+}
+.vegetable-stock.low {
+  color: #d32f2f;
+}
+
+/* === Rating === */
+.vegetable-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #ff9800;
+  margin-top: 5px;
+  gap: 5px;
+}
+
+/* === Price Details === */
 .vegetable-price {
   font-size: 14px;
   margin-bottom: 4px;
@@ -129,7 +174,7 @@
 
 .vegetable-original {
   text-decoration: line-through;
-  color: #888;
+  color: #999;
   margin-right: 6px;
 }
 
@@ -140,11 +185,13 @@
 
 .vegetable-offer {
   font-size: 13px;
-  color: green;
+  color: #388e3c;
+  font-weight: 500;
+  margin-top: 4px;
   margin-bottom: 10px;
 }
 
-/* === Buttons === */
+/* === Add / Notify Buttons === */
 .vegetable-add-btn,
 .notify-btn {
   padding: 8px 12px;
@@ -159,7 +206,6 @@
   gap: 6px;
 }
 
-/* Add to Cart Button */
 .vegetable-add-btn {
   background-color: #fff;
   color: #2e7d32;
@@ -171,7 +217,6 @@
   color: white;
 }
 
-/* Notify Button (same as fruits) */
 .notify-btn {
   background: #fff;
   color: #e91e63;
@@ -182,10 +227,12 @@
   background-color: #e91e63;
   color: white;
 }
+
+/* === Quantity Controls === */
 .quantity-controls {
   display: flex;
   align-items: center;
-  justify-content: center; /* ✅ This centers the controls horizontally */
+  justify-content: center;
   gap: 10px;
   margin-top: 8px;
 }
@@ -204,4 +251,45 @@
 .quantity-controls span {
   font-size: 16px;
   font-weight: 600;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .vegetable-carousel-banner {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .vegetable-carousel-banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  .vegetable-offer-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .vegetable-section-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .vegetable-card-box {
+    padding: 14px;
+  }
+
+  .vegetable-card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+  }
+
+  .quantity-controls {
+    gap: 6px;
+  }
+
+  .quantity-controls button {
+    padding: 4px 6px;
+    font-size: 14px;
+  }
 }

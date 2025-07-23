@@ -130,7 +130,7 @@ const beautyLitItems = [
               </div>
             ))}
           </div>
-          <ScrollCardSection title="Super Sonic Deals" items={superSonicItems} />
+         <ScrollCardSection title="Super Sonic Deals"  items={superSonicItems} />
         <ScrollCardSection title="Beauty LIT Fest" items={beautyLitItems} />
 
         </div>

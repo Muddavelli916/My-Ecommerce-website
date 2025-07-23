@@ -26,7 +26,7 @@
 
 /* === Left Panel: Form Section === */
 .modal-left {
-  background: linear-gradient(135deg, #800080, #c2185b);
+  background: linear-gradient(135deg, #dce3e6, #c2185b);
   color: white;
   padding: 40px 32px;
   flex: 1;
